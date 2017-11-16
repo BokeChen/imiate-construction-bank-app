@@ -1,7 +1,6 @@
 const actions = {
 
- changeText:function(num){
-     console.log("调用actions");
+ changeText:function(num){    
       switch(num){
       case 1:
       return {type:'AlterMain',payload:"mainContainer had been changed"};
@@ -11,7 +10,19 @@ const actions = {
        return action;
        
    }
+   
 },
-
+ changeInfo:(infotype,string)=>{     
+    switch(infotype){
+        case "inp":
+        return {type:"AlterHeaderInp",payload:string};
+        case "div":
+         return {type:"AlterHeaderDiv",payload:string};
+         case "info":
+         return {type:"AlterHeaderInfo",payload:string};
+         default:
+         return action;
+    }
+}
 };
 export default actions;

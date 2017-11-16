@@ -9,14 +9,16 @@ import actions from '../src/action/action.jsx';
 
 const mapStoreStateToProps = (state) =>(
     {
-         mainText:state.app.mainText,
+         headerInfo:state.app.headerInfo,
+         headerInp:state.app.headerInp,
+         headerDiv:state.app.headerDiv
   
     }
 );
 
 const mapDispatchToProps = (dispatch,ownProps)=> ({
    fn:{
-       changeText:(num)=> dispatch(actions.changeText(num))
+       changeHeaderInfo:(string)=> dispatch(actions.changeInfor(infotype,string))
    }
 });
 
@@ -33,15 +35,17 @@ const mapDispatchToProps = (dispatch,ownProps)=> ({
 
 
 
-class Header extends React.Component { 
-
+class Header extends React.Component {
+    constructor(props){
+        super(props);       
+    }
      render(){
     
         return( 
             <div id="header">
                <button></button>
-               <input type="text" placeholder="搜索" className=""/>  
-               <div>投资理财</div>           
+               <input type="text" placeholder="水费" className={this.props.headerInp}/>  
+               <div className={this.props.headerDiv}>{this.props.headerInfo}</div>           
                <button></button>
             </div>
     

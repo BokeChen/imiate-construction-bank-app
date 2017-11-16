@@ -19,7 +19,7 @@ entry:{app:[
 output: {
     filename:'bundle.js',//js合并后的输出的文件，命名为bundle.js
     path:path.resolve(__dirname,'build'),//指令的意思是：把合并的js文件，放到根目录build文件夹下面
-    //publicPath:'',生成文件的公共路径，‘/work/reactweb/dist’ 生产环境下所有的文件路径将会添加这个公共路径
+    //publicPath:'build',//生成文件的公共路径，‘/work/reactweb/dist’ 生产环境下所有的文件路径将会添加这个公共路径
 },
 devtool:'eval-soure-map',
 
@@ -111,7 +111,7 @@ new Happypack({
 }),
  new webpack.DllReferencePlugin({
       context: __dirname,
-      manifest: require('./build/manifest.json'),
+      manifest: require('./build/manifest1.json'),
     }),
 ],
 resolve:{

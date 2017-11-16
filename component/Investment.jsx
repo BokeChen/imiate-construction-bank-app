@@ -11,19 +11,28 @@ import Footer from './Footer.jsx';
 
 const mapStoreStateToProps = (state) =>(
     {
-         mainText:state.app.mainText,
+        headerInfo:state.app.headerInfo,
+        headerInp:state.app.headerInp,
+        headerDiv:state.app.headerDiv
   
     }
 );
 
 const mapDispatchToProps = (dispatch,ownProps)=> ({
    fn:{
-       changeText:(num)=> dispatch(actions.changeText(num))
+    changeHeaderInfo:(infotype,string)=> dispatch(actions.changeInfo(infotype,string)),
    }
 });
 
 class Investment extends React.Component{
-    render(){
+    constructor(props){
+        super(props);
+        this.props.fn.changeHeaderInfo("info","投资理财"); 
+        this.props.fn.changeHeaderInfo("inp","hide"); 
+        this.props.fn.changeHeaderInfo("div","show");
+    }
+    render(){        
+               
       return(
           <div>
              <Header/>
@@ -48,8 +57,8 @@ class Investment extends React.Component{
                     </ul>
                 </div>
                 <div className="investment-banner">
-                    <img src="../src/images/t_01.jpg" alt="手机尽情摇" className="show"/>
-                    <img src="../src/images/t_01.jpg" alt="手机尽情摇" className="hide"/>
+                    <img src={require("../src/images/t_01.jpg")} alt="手机尽情摇" className="show"/>
+                    <img src={require("../src/images/t_01.jpg")} alt="手机尽情摇" className="hide"/>
                     <ul>
                         <li></li>
                         <li></li>
@@ -63,7 +72,7 @@ class Investment extends React.Component{
                     </dl>
                 </div>
                 <div className="investment-info">
-                    <h1 className="headbar">资讯 <span>更多</span></h1>
+                    <h1 className="headbar">资讯 <span>更多></span></h1>
                     <ul>
                         <li><p>快讯提示：ECB执行委普雷特称，对未来通胀的基本预设仍高度依赖宽松</p><p>2017-07-04</p></li>
                     </ul>
@@ -79,10 +88,6 @@ class Investment extends React.Component{
     }
 }
 
-// <h1>mainText:{this.props.mainText}</h1>        
-// <button onClick={()=>this.props.fn.changeText(1)}>修改mainText的值</button>
-
-// <Link to="/topic">jumpe to Topic</Link> 
 
    
 export default connect(mapStoreStateToProps,mapDispatchToProps)(Investment);

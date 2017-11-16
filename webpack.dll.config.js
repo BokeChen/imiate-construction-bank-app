@@ -26,7 +26,7 @@ module.exports = {
   },
   plugins: [
     new webpack.DllPlugin({
-      path: path.join(__dirname+"/build"+'/manifest.json'),
+      path: path.join(__dirname+"/build"+'/manifest1.json'),
       name: '[name]_[chunkhash]',
       context: __dirname,
     }),

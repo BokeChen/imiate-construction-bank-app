@@ -9,6 +9,8 @@ import actions from '../src/action/action.jsx';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 
+import lxtxjpg from '../src/images/lxtx.jpg';
+
 const mapStoreStateToProps = (state) =>(
     {
          // 指定state的参数上传      
@@ -16,6 +18,9 @@ const mapStoreStateToProps = (state) =>(
          mainListUl:state.app.mainListUl,
          mainTopSayHi:state.app.mainTopSayHi,
          mainBannerImg:state.app.mainBannerImg,
+         headerInfo:state.app.headerInfo,
+         headerInp:state.app.headerInp,
+         headerDiv:state.app.headerDiv
 
   
     }
@@ -23,7 +28,7 @@ const mapStoreStateToProps = (state) =>(
 
 const mapDispatchToProps = (dispatch,ownProps)=> ({
    fn:{
-       changeText:(num)=> dispatch(actions.changeText(num))
+    changeHeaderInfo:(infotype,string)=> dispatch(actions.changeInfo(infotype,string)),
    }
 });
 
@@ -35,6 +40,8 @@ const mapDispatchToProps = (dispatch,ownProps)=> ({
 class MainComponent extends React.Component{
     constructor(props){ 
         super(props) ; //必须有super（） 
+        this.props.fn.changeHeaderInfo("inp","show"); 
+        this.props.fn.changeHeaderInfo("div","hide"); 
       
     } 
     render(){
@@ -74,7 +81,7 @@ class MainComponent extends React.Component{
              <div className="main-pay">
                  <h1 className="headbar">龙支付</h1>
                  <div>
-                     <a href="javascript:void(0)"> <img src="../src/images/lxtx.jpg" alt=""/></a>
+                     <a href="javascript:void(0)"> <img src={lxtxjpg} alt=""/></a>
                  </div>
              </div>
              <div className="main-change">

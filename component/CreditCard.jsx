@@ -11,19 +11,25 @@ import Footer from './Footer.jsx';
 
 const mapStoreStateToProps = (state) =>(
     {
-         mainText:state.app.mainText,
+        headerInfo:state.app.headerInfo,
+        headerInp:state.app.headerInp,
+        headerDiv:state.app.headerDiv
   
     }
 );
 
 const mapDispatchToProps = (dispatch,ownProps)=> ({
    fn:{
-       changeText:(num)=> dispatch(actions.changeText(num))
+    changeHeaderInfo:(infotype,string)=> dispatch(actions.changeInfo(infotype,string)),
+    
    }
 });
 
 class CreditCard extends React.Component{
     render(){
+        this.props.fn.changeHeaderInfo("info","信用卡"); 
+        this.props.fn.changeHeaderInfo("inp","hide"); 
+        this.props.fn.changeHeaderInfo("div","show");     
       return(
           <div>
              <Header/>
@@ -49,13 +55,13 @@ class CreditCard extends React.Component{
              </div>
              <div className="creditCard-banner">
                  <a href="">
-                     <img src="../src/images/s_01.jpg" alt="龙卡云闪付" className="show"/>
+                     <img src={require("../src/images/s_01.jpg")} alt="龙卡云闪付" className="show"/>
                  </a>
                  <a href="">
-                     <img src="../src/images/s_02.jpg" alt="同程之礼" className="hide"/>
+                     <img src={require("../src/images/s_02.jpg")} alt="同程之礼" className="hide"/>
                  </a>
                  <a href="">
-                     <img src="../src/images/s_03.jpg" alt="龙卡家庭挚爱信用卡" className="hide"/>
+                     <img src={require("../src/images/s_03.jpg")} alt="龙卡家庭挚爱信用卡" className="hide"/>
                  </a>
                  <ul>
                      <li><a href="javascript:void(0)"></a></li>
@@ -79,12 +85,12 @@ class CreditCard extends React.Component{
                  <s className="long-line"></s>
              </div>
              <div className="creditCard-applyforCards">
-                 <h1 className="headbar"> 我要办卡 <span>更多卡片</span></h1>
+                 <h1 className="headbar"> 我要办卡 <span>更多卡片></span></h1>
                  <div>暂无推荐申请的卡片</div>
              </div>
          
              <div className="creditCard-recommendedMerchant">
-                 <h1 className="headbar"> 优惠商户 <span> 周边商户</span></h1>
+                 <h1 className="headbar"> 优惠商户 <span> 周边商户></span></h1>
                  <div>暂无推荐推荐的商户</div>
              </div>
          </div>

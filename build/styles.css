@@ -1,9 +1,1068 @@
-div{
-    background:url(data:image/png;base64,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) no-repeat 211px 0px;  
+/*样式重写*/
 
-}div {
-  color: #f938ab;
+body {
+    margin: 0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
 }
-div {
-  font: 100% Helvetica, sans-serif;
-  border: 1px solid #333; }
+
+ul {
+    list-style: none;
+    margin:0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+img{width:100%}
+
+/*公共类*/
+.fl {
+    float: left
+}
+
+.rt {
+    float: right
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.headbar {
+    width: 95%;
+    height: 3.566666rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 3.5666rem;
+    letter-spacing: 0.1rem;
+    padding-left: 1.5rem;
+    color: #08B6F2;
+    padding-bottom:0.2rem;
+    margin:0.3rem 0 0;
+    border-bottom: 0.027rem solid #999;
+    background: white url(images/icon-list.png) no-repeat -26.1666rem -28.3rem;
+    background-size:52.36875rem 92.232180rem ;
+   
+}
+
+.footer-tab-sel{
+    background-color:rgba(26,24,40,0.3)!important;
+}
+
+/*公共类结束*/
+#header {
+    padding-top: 1.963rem;
+    height: 3.03rem;
+    width: 100%;
+    background-color: #08B6F2;    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+
+}
+
+#header button:first-child {
+    width: 2.47rem;
+    height: 2.09rem;
+    background: url(images/icon-list.png) no-repeat 0 -4.9rem;
+    background-size:52.36875rem 92.232180rem ;
+    border-color: transparent;
+}
+
+#header button:last-child {
+    width: 2.90rem;
+    height: 2.09rem;
+    background: url(images/icon-list.png) no-repeat -27.016rem -4.73rem;
+    background-size:52.36875rem 92.232180rem ;
+    border-color: transparent;
+}
+
+#header input {
+    font-size: 1rem;
+    width: 22.279rem;
+    height: 2.09rem;
+    float: left;
+    background: url(images/icon-list.png) no-repeat 0 -8.2rem;
+    background-size:52.36875rem 92.232180rem ;
+    border-radius: 1.527rem;
+    outline-color: transparent;
+    padding-left: 3rem;
+    color: white;
+    border:none;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: white !important;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: white !important;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: white !important;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: white !important;
+}
+
+/* main 区域的样式*/
+
+.main-top {
+    width: 100%;
+    height: 22.81rem;
+    background-color: #08B6F2;
+    padding-top: 2.01rem;
+}
+
+.main-top h1 {
+    font-size: 2.1rem;
+    font-weight:normal;
+    color: white;
+    margin: 5.2rem 1rem 1rem;
+}
+
+.main-top > button {
+    width: 8.56rem;
+    height: 2.59rem;
+    font-size: 1rem;
+    color: #08B6F2;
+    border: none;
+    outline: none;
+    margin-left: 1rem;
+    background: url(images/icon-list.png) -24.5rem -0.37rem;
+    background-size:52.36875rem 92.232180rem ;
+}
+
+.main-top ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: 3.2rem;
+    padding-left:0;
+}
+
+.main-top ul li {
+    margin: 0;
+    width: 24%;
+    height: 2.13rem;
+    font-size: 1.06rem;
+    color: white;
+    text-align: center;
+}
+
+.main-top ul li p {
+    width: 2.947rem;
+    height: 2.947rem;
+    background: url(images/icon-list.png) -0.1666rem -11.523rem;
+    background-size:52.36875rem 92.232180rem ;
+    margin: 0 auto 1rem;
+}
+
+.main-top ul li:nth-child(2) p {
+    background-position-x: -8.4rem;    
+}
+
+.main-top ul li:nth-child(3) p {
+    background-position-x: -16.4rem;
+}
+
+.main-top ul li:nth-child(4) p {
+    background-position-x: -24.2rem;
+}
+
+.main-list {
+    position: relative;
+}
+
+.main-list ul {
+    width: 100%;
+    height: 14.92rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-left:0;
+    margin:0;
+}
+
+.main-list ul li {
+    width: 25%;
+    text-align: center;
+    font-size: 0.7rem;
+
+}
+
+.main-list ul li a {
+    color: #333;
+    font-size: 1.06rem;
+}
+
+.main-list ul li p {
+    width: 2.91666rem;
+    height: 2.91666rem;
+    background: url(images/icon-list.png) 0.0555rem -32.138888rem;
+    background-size:52.36875rem 92.232180rem ;
+    margin: 1.2rem auto 0.8rem;
+    position: relative;
+}
+
+.main-list ul li:nth-child(2) p {
+    background-position-x: -8.5rem;
+}
+
+.main-list ul li:nth-child(3) p {
+    background-position-x: -15.9rem;
+}
+
+.main-list ul li:nth-child(4) p {
+    background-position-x: -23.9166rem;
+}
+
+.main-list ul li:nth-child(5) p {
+    background-position: -7.8rem -38.5rem;
+}
+
+.main-list ul li:nth-child(6) p {
+    background-position: -15.7rem -38.5rem;
+}
+
+.main-list ul li:nth-child(7) p {
+    background-position: -24rem -38.5rem;
+}
+
+.main-list ul li:nth-child(8) p {
+    background-position: -30.7055rem -4.7rem;
+    margin-top: 2rem;
+}
+
+.long-line {
+    width: 93%;
+    height: 0.1rem;
+    background-image: linear-gradient(to top, #666 20%, white 100%);
+    position: absolute;
+    top: 7.5rem;
+    left: 1rem;
+    z-index: 2;
+}
+
+.main-banner {
+    padding-bottom:0.2rem;
+    background-color: #eee;
+}
+
+.main-pay div {
+    padding-bottom: 0.5rem;
+    background-color: #eee;
+}
+
+.main-change {
+    width: 100%;
+    height: 14.65rem;
+    padding-bottom: 0.4rem;
+    background-color: #dddddd;
+    box-sizing: border-box;
+
+}
+
+.main-change h1 {
+    margin-bottom: 0;
+}
+
+.main-change form {
+    background-color: white;
+    height: 9.75rem;
+    padding-top: 0.8rem;
+
+}
+
+.main-change form label {
+    font-size: 1rem;
+    padding: 0.4rem 0 0 1.5rem;
+    height: 2rem;
+    display: block;
+    position: relative;
+}
+
+.main-change form input {
+    display: inline-block;
+    margin-left: 2rem;
+    width: 14rem;
+    height: 74%;
+    font-size: 1rem;
+    border:0;
+}
+
+
+.main-change form label > button {
+    width: 6.402rem;
+    height: 2.777rem;
+    background: url(images/icon-list.png) no-repeat -35.4rem -4.9rem;
+    background-size:52.36875rem 92.232180rem ;
+    border: none;
+    position: absolute;
+  
+    right: 1.194444rem;
+}
+
+#main ::-webkit-input-placeholder { /* WebKit browsers */
+    font-size: 1rem;
+    color: #B8B8B8 !important;
+}
+
+#main :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-size: 0.6rem;
+    color: #B8B8B8 !important;
+}
+
+#main ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-size: 0.6rem;
+    color: #B8B8B8 !important;
+}
+
+#main :-ms-input-placeholder { /* Internet Explorer 10+ */
+    font-size: 0.6rem;
+    color: #B8B8B8 !important;
+}
+
+/*.   main-tel-charge          */
+
+
+.main-tel-charge{
+    margin-bottom: 5.5rem;
+}
+.main-tel-charge div{
+    padding:0 1rem;
+   
+}
+.main-tel-charge p {
+    height: 3.388rem;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.main-tel-charge p label {
+    font-size: 1.5rem;
+    padding-left:0.8rem;
+    color:gray;
+}
+
+.main-tel-charge p label input {
+    position:absolute;
+    top:0.3rem;
+    left:4.80555rem;
+    height:2rem;
+    font-size:1.5rem;
+    width:15rem;
+    border: 0;
+    margin-left:4rem;
+    color: gray;
+}
+
+.main-tel-charge p label button{
+    width:1.7rem;
+    height:2rem;
+    border:none;
+    background:url(images/icon-list.png) no-repeat -46.4rem -0.416rem;
+    background-size:52.36875rem 92.232180rem ;
+    position: absolute;
+    bottom:2rem;
+    right:0.111rem; 
+}
+.main-tel-charge p:first-child{
+    border-bottom: 0.027rem solid #999;
+}
+
+.main-tel-charge ::-webkit-input-placeholder { /* WebKit browsers */
+    font-size: 1.3rem !important;
+    color: #B8B8B8 !important;
+}
+.main-tel-charge p:last-child{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+}
+.main-tel-charge p:last-child a{
+    display:inline-block;
+    font-size:1rem;
+    width:4.0555rem;
+    height:3.055rem;
+    padding:0.65rem 0.4rem;
+    color:#08B6F2;
+    border:0.1277rem solid #08B6F2;
+    border-radius:0.33888rem ;
+    box-sizing: border-box;
+}
+
+/* CreditCard 区域的样式*/
+
+
+#header div{ 
+    color:white;
+     font-size: 1.6rem;
+     font-weight: 100;
+     line-height: 1.5rem;
+     text-align: center;
+     width: 22.279rem;
+     height: 2.09rem;
+     float: left;
+}
+
+.creditCard-login{
+    font-size: 1rem;
+    width: 100%;
+    height: 20.6rem;
+    background-color: #08B6F2;
+    padding-top: 5.01rem;
+   
+}   
+
+.creditCard-login button{
+    font-size:1rem;
+    display: block;
+    width:9.8rem;
+    height: 9.8rem;
+    border-radius: 9.8rem;
+    border:none;
+    outline: none;
+    margin:3.5rem auto 3rem ;
+    background:url(images/icon-list.png) no-repeat -32rem -9.783rem;
+    background-size:52.36875rem 92.232180rem ;
+}
+
+.creditCard-login p{
+
+    color:white;
+    font-size: 1.2rem;
+    font-weight: 200;
+    text-align: center;
+    
+}
+
+.creditCard-listSelf{
+    position: relative;
+}
+
+
+.creditCard-listSelf ul {
+    width: 100%;
+    height: 14.92rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-left:0;
+    margin:0;
+}
+
+.creditCard-listSelf ul li {
+    width: 25%;
+    text-align: center;
+    font-size: 0.7rem;
+
+}
+
+.creditCard-listSelf ul li a {
+    color: #333;
+    font-size: 1.06rem;
+}
+
+.creditCard-listSelf ul li p {
+    width: 2.91666rem;
+    height: 2.91666rem;
+    background: url(images/icon-list.png) 0rem -47.9rem;
+    background-size:52.36875rem 92.232180rem ;
+    margin: 1.2rem auto 0.8rem;
+    position: relative;
+}
+
+.creditCard-listSelf ul li:nth-child(2) p{
+    background-position: -8rem -47.9rem;
+}
+.creditCard-listSelf ul li:nth-child(3) p{
+    background-position: -16.4rem -47.9rem;
+}
+.creditCard-listSelf ul li:nth-child(4) p{
+    background-position:  -24rem -47.9rem;
+}
+.creditCard-listSelf ul li:nth-child(5) p{
+    background-position: 0rem -50.8rem;
+}
+.creditCard-listSelf ul li:nth-child(6) p{
+    background-position: -8rem -50.8rem;
+}
+.creditCard-listSelf ul li:nth-child(7) p{
+    background-position: -16rem -50.8rem;
+}
+
+.creditCard-listSelf .long-line {
+    width: 100%;
+    height: 0.1rem;
+    background-image: linear-gradient(to top, #ddd 20%, white 100%);
+    position: absolute;
+    top: 8.1rem;
+    left: 0;
+    z-index: 2;
+}
+
+.creditCard-banner {
+    background-color: #eee;
+}
+
+
+.creditCard-list{
+    position: relative;
+}
+
+
+.creditCard-list ul {
+    width: 100%;
+    height: 14.92rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-left:0;
+    margin:0;
+}
+
+.creditCard-list ul li {
+    width: 25%;
+    text-align: center;
+    font-size: 0.7rem;
+
+}
+
+.creditCard-list ul li a {
+    color: #333;
+    font-size: 1.06rem;
+}
+
+.creditCard-list ul li p {
+    width: 2.91666rem;
+    height: 2.91666rem;
+    background: url(images/icon-list.png) 0.0555rem -38.138888rem;
+    background-size:52.36875rem 92.232180rem ;
+    margin: 1.2rem auto 0.8rem;
+    position: relative;
+}
+
+
+.creditCard-list ul li:nth-child(2) p {   
+    background-position: -8rem -38.138888rem;  
+}
+.creditCard-list ul li:nth-child(3) p {   
+    background-position:  -16rem -38.138888rem;  
+}
+.creditCard-list ul li:nth-child(4) p {   
+    background-position:  -24rem -38.138888rem;  
+}
+.creditCard-list ul li:nth-child(5) p {   
+    background-position:  0rem -41.138888rem;  
+}
+.creditCard-list ul li:nth-child(6) p {   
+    background-position:  -8rem -41.138888rem;  
+}
+.creditCard-list ul li:nth-child(7) p {   
+    background-position:  -16rem -41.138888rem;  
+}
+.creditCard-list ul li:nth-child(8) p {   
+    background-position: -24rem -41.138888rem;  
+}
+
+
+.creditCard-list .long-line {
+    width: 100%;
+    height: 0.1rem;
+    background-image: linear-gradient(to top, #ddd 20%, white 100%);
+    position: absolute;
+    top: 11.4rem;
+    left: 0;
+    z-index: 2;
+}
+.creditCard-applyforCards{
+    border-top:1rem solid #eee;
+}
+.creditCard-applyforCards div,.creditCard-recommendedMerchant div{
+    height:3rem;
+    line-height: 3rem;
+    color:#999;
+    font-size: 1.2rem;
+    padding-left:2rem;
+}
+.creditCard-recommendedMerchant{
+    border-top:1rem solid #eee;
+    margin-bottom:4.5rem;
+}
+
+/*                   Investment 区域的样式            */
+
+.investment-list{
+    font-size: 1rem;
+    width: 100%;
+    height: 20.6rem;
+    background-color: #08B6F2;
+    padding-top: 5.01rem;
+   
+} 
+
+
+
+
+
+.investment-list{
+    position: relative;
+}
+
+
+.investment-list ul {
+    width: 100%;
+    height: 16.92rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-left:0;
+    margin-top:1rem;
+}
+
+.investment-list ul li {
+    width: 25%;
+    text-align: center;
+    font-size: 0.7rem;
+
+}
+
+.investment-list ul li a {
+    color:white;
+    font-size: 1.06rem;
+}
+
+.investment-list ul li p {
+    width: 3rem;
+    height: 2.91666rem;
+    background: url(images/icon-list.png) -0.1rem -15.7rem;
+    background-size:52.36875rem 92.232180rem ;
+    margin: 1.2rem auto 1.2rem;
+    position: relative;
+}
+.investment-list ul li:nth-child(2) p{
+    background-position: -8.2rem -15.7rem;
+}
+.investment-list ul li:nth-child(3) p{
+    background-position: -16.2rem -15.7rem;
+}
+.investment-list ul li:nth-child(4) p{
+    background-position: -24.2rem -15.7rem;
+}
+.investment-list ul li:nth-child(5) p{
+    background-position: -0.41rem -19.8rem;
+}
+.investment-list ul li:nth-child(6) p{
+    background-position: -8.41rem -19.8rem;
+}
+.investment-list ul li:nth-child(7) p{
+    background-position: -16.41rem -19.8rem;
+}
+.investment-list ul li:nth-child(8) p{
+    background-position: -24.41rem -19.8rem;
+}
+
+.investment-ad ul{
+    width:100%;
+    padding-left:0;
+    height:6.487rem;
+}
+.investment-ad ul li{
+    display: inline-block;
+    width:50%;
+    height:100%
+
+}
+.investment-ad ul li:first-child{
+    box-sizing: border-box;
+    border-right:0.1rem solid #ddd;
+}
+.investment-banner {
+    border-top:1rem solid #ddd;
+    background-color: #eee;
+}
+
+
+
+
+
+
+
+/*                   loan 区域的样式            */
+
+.loan-top {
+    width: 100%;
+    height: 22.81rem;
+    background-color: #08B6F2;
+    padding-top: 2.01rem;
+}
+
+.loan-top h1 {
+    font-size: 2.1rem;
+    font-weight:normal;
+    color: white;
+    margin: 5.2rem 1rem 1rem;
+}
+
+.loan-top > button {
+    width: 8.56rem;
+    height: 2.59rem;
+    font-size: 1rem;
+    color: #08B6F2;
+    border: none;
+    outline: none;
+    margin-left: 1rem;
+    background: url(images/icon-list.png) -24.5rem -0.37rem;
+    background-size:52.36875rem 92.232180rem ;
+}
+
+.loan-top ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: 3.2rem;
+    padding-left:0;
+}
+
+.loan-top ul li {
+    margin: 0;
+    width: 24%;
+    height: 2.13rem;
+    font-size: 1.06rem;
+    color: white;
+    text-align: center;
+}
+
+.loan-top ul li p {
+    width: 2.947rem;
+    height: 2.947rem;
+    background: url(images/icon-list.png) -0.2rem -23.9rem;
+    background-size:52.36875rem 92.232180rem ;
+    margin: 0 auto 1rem;
+}
+
+.loan-top ul li:nth-child(2) p {    
+    background-position: -8.2rem -23.9rem;
+}
+.loan-top ul li:nth-child(3)  p{
+            
+    background-position:  -16.2rem -23.9rem;
+}
+ .loan-top ul li:nth-child(4) p {
+                
+    background-position:  -24.2rem -23.9rem;
+}
+    
+
+
+.loan-list {
+    position: relative;
+}
+
+.loan-list ul {
+    width: 100%;
+    height: 7.34rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-left:0;
+    margin:0;
+    border-bottom:1rem solid #ddd;
+}
+
+.loan-list ul li {
+    width: 25%;
+    text-align: center;
+    font-size: 0.7rem;
+
+}
+
+.loan-list ul li a {
+    color: #333;
+    font-size: 1.06rem;
+}
+
+.loan-list ul li p {
+    width: 2.91666rem;
+    height: 2.91666rem;
+    background: url(images/icon-list.png) -0.2rem -44.4rem;
+    background-size:52.36875rem 92.232180rem ;
+    margin: 1.2rem auto 0.8rem;
+    position: relative;
+}
+.loan-list ul li:nth-child(2) p {
+
+    background-position:  -8.2rem -44.4rem;
+}
+.loan-list ul li:nth-child(3) p {
+    
+    background-position:  -16.2rem -44.4rem;
+}
+
+
+.loan-banner{  margin-bottom:4.4rem;}
+.loan-banner img{
+    border-bottom:1rem solid #ddd;
+}
+
+/*               yxsh 区域的样式              */
+
+
+
+.yxsh-header{
+    height:9.84rem;
+    background-color:#08B6F2;
+}
+
+
+.yxsh-header{
+    position: relative;
+}
+
+
+.yxsh-header ul {
+    width: 100%;
+    height: 8.92rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding:0.8rem 0;
+    margin-top:4.9rem;
+}
+
+.yxsh-header ul li {
+    width: 25%;
+    text-align: center;
+    font-size: 0.7rem;
+
+}
+
+.yxsh-header ul li a {
+    color:white;
+    font-size: 1.06rem;
+}
+
+.yxsh-header ul li p {
+    width: 2.91666rem;
+    height: 2.91666rem;
+    background: url(images/icon-list.png) 0rem -28.4rem;
+    background-size:52.36875rem 92.232180rem ;
+    margin: 1.2rem auto 1.8rem;
+    position: relative;
+}
+
+.yxsh-header ul li:nth-child(2) p {
+    background-position:  -11rem -28.4rem;
+}
+.yxsh-header ul li:nth-child(3) p {
+    background-position: -22rem -28.4rem;
+}
+
+
+
+
+.yxsh-banner{
+   border-bottom:1rem solid #ddd; 
+}
+
+
+
+.yxsh-tel-charge{
+    border-bottom: 1rem solid #ddd;
+}
+.yxsh-tel-charge div{
+    padding:0 1rem;
+   
+}
+.yxsh-tel-charge p {
+    height: 3.388rem;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.yxsh-tel-charge p label {
+    font-size: 1.5rem;
+    padding-left:0.8rem;
+    color:gray;
+}
+ 
+.yxsh-tel-charge p label input {
+    position:absolute;
+    top:0.3rem;
+    left:4.80555rem;
+    height:2rem;
+    font-size:1.5rem;
+    width:15rem;
+    border: 0;
+    margin-left:4rem;
+    color: gray;
+}
+
+.yxsh-tel-charge p label button{
+    width:1.7rem;
+    height:2rem;
+    border:none;
+    background:url(images/icon-list.png) no-repeat -46.4rem -0.416rem;
+    background-size:52.36875rem 92.232180rem ;
+    position: absolute;
+    bottom:2rem;
+    right:0.111rem;   
+}
+.yxsh-tel-charge p:first-child{
+    border-bottom: 0.027rem solid #999;
+}
+
+.yxsh-tel-charge ::-webkit-input-placeholder { /* WebKit browsers */
+    font-size: 1.3rem !important;
+    color: #B8B8B8 !important;
+}
+.yxsh-tel-charge p:last-child{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+}
+.yxsh-tel-charge p:last-child a{
+    display:inline-block;
+    font-size:1rem;
+    width:4.0555rem;
+    height:3.055rem;
+    padding:0.65rem 0.4rem;
+    color:#08B6F2;
+    border:0.1277rem solid #08B6F2;
+    border-radius:0.33888rem ;
+    box-sizing: border-box;
+}
+
+.yxsh-history{
+    margin-bottom:4.5rem;
+    border-bottom:1rem solid #ddd;
+}
+.yxsh-history h1{
+    font-family: Helvetica;
+}
+.headbar span{
+    float:right;
+    font-size: 1rem;
+
+}
+.yxsh-history div{
+    height:5.8rem;
+    line-height: 5.8rem;
+    text-align: center;
+    color:gray;  
+}
+
+
+/*               footer               */
+
+#footer {
+    color: green;
+    width: 100%;
+    height: 4.56rem;
+    position: fixed;
+    bottom: 0;  
+    display: -webkit-box;  
+    display: -ms-flexbox;  
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; 
+     z-index: 10;
+
+}
+
+#footer b {  
+  width:100%;
+  height:100%;
+  position: absolute;
+  background:rgb(26,25,39); 
+}
+
+#footer span {    
+    width:100%;
+    height:2.58rem;
+    background: url(images/icon-list.png) no-repeat  -0.2rem -64.4899rem;  
+    background-size:52.36875rem 92.232180rem ;
+    position: absolute;
+    top:0; 
+    z-index: 10;
+}
+
+#footer a {
+    /* display: block; */
+    width: 20%;
+    font-size: 1rem;
+    color: #858586 !important;
+    text-align: center;
+    background-color: transparent;
+    position: relative;  
+    z-index: 100;
+}
+
+#footer i{
+    display: block;
+    width:100%;
+    height:2.58rem;
+      
+}
+#footer s{
+    display: block;
+    width:101%;
+    height:2.58rem;   
+    background-color:rgb(26,25,39);
+}
+
+.i-active{
+    background:url(images/icon-list.png) no-repeat  0 -60.6rem; 
+    background-size:52.36875rem 92.232180rem ;
+    width:90% !important;
+}
+

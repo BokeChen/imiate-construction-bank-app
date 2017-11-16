@@ -11,18 +11,25 @@ import Footer from './Footer.jsx';
 
 const mapStoreStateToProps = (state) =>(
     {
-         mainText:state.app.mainText,
+        headerInfo:state.app.headerInfo,
+        headerInp:state.app.headerInp,
+        headerDiv:state.app.headerDiv
   
     }
 );
 
 const mapDispatchToProps = (dispatch,ownProps)=> ({
    fn:{
-       changeText:(num)=> dispatch(actions.changeText(num))
+    changeHeaderInfo:(infotype,string)=> dispatch(actions.changeInfo(infotype,string)),
    }
 });
 
 class Ruixiangshenghuo extends React.Component{
+    constructor(props){
+        super(props);
+        this.props.fn.changeHeaderInfo("inp","show"); 
+        this.props.fn.changeHeaderInfo("div","hide"); 
+    }
     render(){
       return(
           <div>
@@ -43,7 +50,7 @@ class Ruixiangshenghuo extends React.Component{
                  </ul>
              </div>
              <div className="yxsh-banner">
-                 <img src="images/f_01.jpg" alt=""/>
+                 <img src={require("../src/images/f_01.jpg")} alt=""/>
              </div>
          
              <div className="yxsh-tel-charge">
@@ -63,9 +70,9 @@ class Ruixiangshenghuo extends React.Component{
                      </p>
                  </div>
              </div>
-             <div>
-                 <h1>最近缴费 <span>更多</span></h1>
-                 <div></div>
+             <div className="yxsh-history">
+                 <h1 className="headbar">最近缴费 <span>更多></span></h1>
+                 <div>暂无历史缴费信息</div>
              </div>
              
          </div>
