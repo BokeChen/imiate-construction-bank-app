@@ -3,8 +3,11 @@ import ReactDOM from 'react-dom';
 import {NavLink,Route,BrowserRouter as Router,HashRouter,Switch,Redirect}  from 'react-router-dom';
 
 import MainComponent from '../../component/Main.jsx';
-//import Topic from '../../component/Topic.jsx';
-import getComponent from '../../component/common/getComponent.jsx';
+import CreditCardComponent from '../../component/CreditCard.jsx';
+import InvestmentComponent from '../../component/Investment.jsx';
+import LoanComponent from '../../component/Loan.jsx';
+import RuixiangshenghuoComponent from '../../component/Ruixiangshenghuo.jsx';
+//import getComponent from '../../component/common/getComponent.jsx';
 
 
 const routes =[
@@ -16,22 +19,23 @@ const routes =[
     {
         path:'/CreditCard',
         exact:false,
-        component: (props) => getComponent(props, ()=> import('../../component/CreditCard.jsx'))
+        component: CreditCardComponent 
     },
     {
         path:'/Investment',
         exact:false,
-        component: (props) => getComponent(props, ()=> import('../../component/Investment.jsx'))
+        component: InvestmentComponent
     },
     {
         path:'/Loan',
         exact:false,
-        component: (props) => getComponent(props, ()=> import('../../component/Loan.jsx'))
+        component: LoanComponent
     },
     {
         path:'/Ruixiangshenghuo',
         exact:false,
-        component: (props) => getComponent(props, ()=> import('../../component/Ruixiangshenghuo.jsx'))
+        component:RuixiangshenghuoComponent
+       // component: (props) => getComponent(props, ()=> import('../../component/Ruixiangshenghuo.jsx'))
     },
 ];
 

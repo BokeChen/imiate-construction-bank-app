@@ -12,15 +12,15 @@ var server = new webpackDevServer(webpack(config),{
     historyApiFallback:true,//html5接口,设置为true，所有路径均转到index.html
     inline:true,//是否实时刷新，即代码有更改，自动刷新浏览器 
     stats:{colors:true},//显示bundle文件信息，不同类型的信息用不同的颜色显示
-    /*
-    proxy:{     //服务器代理配置
-        "/api":{  //相对路径已/api打头，将会触发代理
-            target:"http://localhost:3000", //代理地址
-            pathRewrite:{"^/api":""}, //路径替换
-            secure:false //跨域
-        }
-    }
-    */
+    
+    // proxy:{     //服务器代理配置
+    //     "/api":{  //相对路径已/api打头，将会触发代理
+    //         target:"http://127.0.0.1:80", //代理地址
+    //         pathRewrite:{"^/api":""}, //路径替换
+    //         secure:false //跨域
+    //     }
+    // }
+    
 
 });
 //将其他路由，全部返回index.html

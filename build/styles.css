@@ -1065,4 +1065,8 @@ img{width:100%}
     background-size:52.36875rem 92.232180rem ;
     width:90% !important;
 }
+.card-swipe{width:100%;overflow: hidden;}
+.card-slide{width:300%;overflow: hidden;}
+.card-slide .item{float:left;width: 33.33%;}
+
 

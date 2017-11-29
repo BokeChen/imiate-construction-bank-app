@@ -9,8 +9,8 @@ var happypackThreadPool = Happypack.ThreadPool({size:4});//根据电脑的idle�
 module.exports = {
 
 entry:{app:[ 
-              'webpack-dev-server/client?http://localhost:8080',  // 热更新监听此地址                                                     
-               'webpack/hot/dev-server',  // 启用热更新
+              //'webpack-dev-server/client?http://localhost:8080',  // 热更新监听此地址 ,如果要生成最终文件之前，需要屏蔽这两句热启动服务的代码                                                    
+               //'webpack/hot/dev-server',  // 启用热更新
               path.resolve(__dirname, 'src', 'app')  
         ] },
             

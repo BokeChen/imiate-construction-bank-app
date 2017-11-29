@@ -10,6 +10,8 @@ import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 
 import lxtxjpg from '../src/images/lxtx.jpg';
+import axios from 'axios';
+import ReactSwipe from 'react-swipes';
 
 const mapStoreStateToProps = (state) =>(
     {
@@ -33,26 +35,52 @@ const mapDispatchToProps = (dispatch,ownProps)=> ({
 });
 
 
-
-
-
-
 class MainComponent extends React.Component{
     constructor(props){ 
         super(props) ; //必须有super（） 
         this.props.fn.changeHeaderInfo("inp","show"); 
         this.props.fn.changeHeaderInfo("div","hide"); 
-      
+        this.get = this.get.bind(this);
+        this.state={
+            money:0,
+            curCard:0
+        }
     } 
+    shouldComponentUpdate(nextProps,nextState) {       
+      
+        return true;
+     }
+    get(){
+        // var url = "api/1.php" ;
+        // axios.get(`${url}`).then((response)=>{this.setState({"money":response.data})}).catch((error)=>{console.log(error)});
+        this.setState({"money":1000});
+    }
     render(){
       var {mainTopUl,mainTopSayHi,mainListUl,mainBannerImg} = this.props;
+      let opt = {
+        distance: document.documentElement.clientWidth, // 每次移动的距离，卡片的真实宽度
+        swTouchend: (ev) => {
+            let data = {
+                moved: ev.moved,
+                originalPoint: ev.originalPoint,
+                newPoint: ev.newPoint,
+                cancelled: ev.cancelled
+            }           
+            this.setState({
+                curCard: ev.newPoint
+            })
+        }
+        };
      return(
           <div>
              <Header/>
              <div id="main">
                  <div className="main-top">
                     <h1>{mainTopSayHi}</h1>
-                    <button></button>
+                    <button onClick={this.get}></button>                     
+                    <span>
+                     {this.state.money !=0 && (this.state.money)}
+                     </span>
                     <ul>
                         { mainTopUl.map((value)=>( <li><a href="javascript:void(0)"><p></p>{value}</a></li> ))}                         
                     </ul>
@@ -64,18 +92,21 @@ class MainComponent extends React.Component{
                  <s className="long-line"></s>
              </div>
              <div className="main-banner">
-                  {mainBannerImg.map((value)=>(
-                    <a href={value.href}>
-                        <img src={value.src} alt={value.alt} className={value.className}/>
-                    </a>
-
-                  ))}
-                 
+                    <div className='card-swipe'>                    
+                        <ReactSwipe className="card-slide" options={opt}>
+                            {mainBannerImg.length && mainBannerImg.map((value,index) =><div className="item" >                        
+                                <a href={value.href}>
+                                 <img src={value.src} alt={value.alt} className={value.className} />
+                                </a>
+                            </div>)}
+                         </ReactSwipe>
+                    </div>                  
+                  
                  <ul>
                      <li><a href="javascript:void(0)"></a></li>
                      <li><a href="javascript:void(0)"></a></li>
                      <li><a href="javascript:void(0)"></a></li>
-                 </ul>
+                 </ul> 
              </div>
          
              <div className="main-pay">
