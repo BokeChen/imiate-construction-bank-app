@@ -23,6 +23,13 @@ const actions = {
          default:
          return action;
     }
+},
+changeImg:(imglist)=>{ 
+    var list = imglist.slice();  
+    var temp = list.shift(); 
+        list.push(temp);       
+      return {type:"AlterImglist",payload:list};
+      
 }
 };
 export default actions;

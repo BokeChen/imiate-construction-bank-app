@@ -31,6 +31,7 @@ const mapStoreStateToProps = (state) =>(
 const mapDispatchToProps = (dispatch,ownProps)=> ({
    fn:{
     changeHeaderInfo:(infotype,string)=> dispatch(actions.changeInfo(infotype,string)),
+    changeImg:(imglist)=> dispatch(actions.changeImg(imglist)),
    }
 });
 
@@ -41,19 +42,30 @@ class MainComponent extends React.Component{
         this.props.fn.changeHeaderInfo("inp","show"); 
         this.props.fn.changeHeaderInfo("div","hide"); 
         this.get = this.get.bind(this);
+        this.lunbo = this.lunbo.bind(this);
         this.state={
             money:0,
-            curCard:0
+            curCard:0          
         }
+        this.interval= setInterval(this.lunbo,5000);
+        
     } 
     shouldComponentUpdate(nextProps,nextState) {       
-      
+        //console.log(this.props.mainBannerImg);        
         return true;
+     }       
+     componentWillUnmount(){
+        clearInterval(this.interval);
      }
     get(){
         // var url = "api/1.php" ;
         // axios.get(`${url}`).then((response)=>{this.setState({"money":response.data})}).catch((error)=>{console.log(error)});
         this.setState({"money":1000});
+    }
+    lunbo(){        
+        let imglist = this.props.mainBannerImg;       
+        this.props.fn.changeImg(imglist);     
+        
     }
     render(){
       var {mainTopUl,mainTopSayHi,mainListUl,mainBannerImg} = this.props;
@@ -79,79 +91,77 @@ class MainComponent extends React.Component{
                     <h1>{mainTopSayHi}</h1>
                     <button onClick={this.get}></button>                     
                     <span>
-                     {this.state.money !=0 && (this.state.money)}
+                         {this.state.money !=0 && (this.state.money)}
                      </span>
                     <ul>
                         { mainTopUl.map((value)=>( <li><a href="javascript:void(0)"><p></p>{value}</a></li> ))}                         
                     </ul>
                  </div>
-             <div className="main-list">
-                 <ul>
-                    { mainListUl.map((value)=>( <li><a href="javascript:void(0)"><p></p>{value}</a></li> ))}   
-                 </ul>
-                 <s className="long-line"></s>
-             </div>
-             <div className="main-banner">
-                    <div className='card-swipe'>                    
-                        <ReactSwipe className="card-slide" options={opt}>
-                            {mainBannerImg.length && mainBannerImg.map((value,index) =><div className="item" >                        
-                                <a href={value.href}>
-                                 <img src={value.src} alt={value.alt} className={value.className} />
-                                </a>
-                            </div>)}
-                         </ReactSwipe>
-                    </div>                  
-                  
-                 <ul>
-                     <li><a href="javascript:void(0)"></a></li>
-                     <li><a href="javascript:void(0)"></a></li>
-                     <li><a href="javascript:void(0)"></a></li>
-                 </ul> 
-             </div>
-         
-             <div className="main-pay">
-                 <h1 className="headbar">龙支付</h1>
-                 <div>
-                     <a href="javascript:void(0)"> <img src={lxtxjpg} alt=""/></a>
-                 </div>
-             </div>
-             <div className="main-change">
-                 <h1 className="headbar"> 快速转账</h1>
-                 <div>
-                     <form action="">
-                         <label>收款户名
-                             <input type="text" name="uCount" placeholder="请输入收款户名"/>
-                         </label>
-                         <label>收款账户
-                             <input type="text" name="recCountNumber" placeholder="请输入收款账号或手机号"/>
-                         </label>
-                         <label>转账金额
-                             <input type="text" name="money-count" placeholder="请输入转账金额"/>
-                             <button></button>
-                         </label>
-                     </form>
-                 </div>
-             </div>
-             <div className="main-tel-charge">
-                 <h1 className="headbar">话费充值</h1>
-                 <div>
-                     <p>
-                         <label> 手机号码
-                             <input type="tel" name="telphoneNo" id="telphoneNo" placeholder="请输入要充值的电话号码"/>
-                             <button></button>
-                         </label>
-                     </p>
-                     <p>
-                         <a href="javascript:void(0) ">￥50</a>
-                         <a href="javascript:void(0) ">￥100</a>
-                         <a href="javascript:void(0) ">￥300</a>
-                         <a href="javascript:void(0) ">￥500</a>
-                     </p>
-                 </div>
-             </div>
-         </div>
-
-             <Footer/>        
+                <div className="main-list">
+                    <ul>
+                        { mainListUl.map((value)=>( <li><a href="javascript:void(0)"><p></p>{value}</a></li> ))}   
+                    </ul>
+                    <s className="long-line"></s>
+                </div>
+                <div className="main-banner">
+                        <div className='card-swipe'>                    
+                            <ReactSwipe className="card-slide" options={opt}>
+                                {mainBannerImg.length && mainBannerImg.map((value,index) =><div className="item" >                        
+                                    <a href={value.href}>
+                                    <img src={value.src} alt={value.alt} className={value.className} />
+                                    </a>
+                                </div>)}
+                            </ReactSwipe>
+                        </div>                  
+                    
+                    <ul>
+                        <li><a href="javascript:void(0)"></a></li>
+                        <li><a href="javascript:void(0)"></a></li>
+                        <li><a href="javascript:void(0)"></a></li>
+                    </ul> 
+                </div>                              
+                <div className="main-pay">
+                    <h1 className="headbar">龙支付</h1>
+                    <div>
+                        <a href="javascript:void(0)"> <img src={lxtxjpg} alt=""/></a>
+                    </div>
+                </div>
+                <div className="main-change">
+                    <h1 className="headbar"> 快速转账</h1>
+                    <div>
+                        <form action="">
+                            <label>收款户名
+                                <input type="text" name="uCount" placeholder="请输入收款户名"/>
+                            </label>
+                            <label>收款账户
+                                <input type="text" name="recCountNumber" placeholder="请输入收款账号或手机号"/>
+                            </label>
+                            <label>转账金额
+                                <input type="text" name="money-count" placeholder="请输入转账金额"/>
+                                <button></button>
+                            </label>
+                        </form>
+                    </div>
+                </div>
+                <div className="main-tel-charge">
+                    <h1 className="headbar">话费充值</h1>
+                    <div>
+                        <p>
+                            <label> 手机号码
+                                <input type="tel" name="telphoneNo" id="telphoneNo" placeholder="请输入要充值的电话号码"/>
+                                <button></button>
+                            </label>
+                        </p>
+                        <p>
+                            <a href="javascript:void(0) ">￥50</a>
+                            <a href="javascript:void(0) ">￥100</a>
+                            <a href="javascript:void(0) ">￥300</a>
+                            <a href="javascript:void(0) ">￥500</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <Footer/>        
           </div>
       );  
     }
